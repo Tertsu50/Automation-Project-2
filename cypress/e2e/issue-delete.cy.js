@@ -12,7 +12,7 @@ describe('Issue deletion', () => {
     //Click on Delete issue button
     //Check that confirmation pop-up dialogue is visible
     //Confirm the deletion
-    it('Should delete issue successfully', () => {
+    it('Test case 1: Issue Deletion', () => {
         const expectedAmountOfIssuesAfterDeletion = 3;
 
         cy.get('[data-testid="modal:issue-details"]').should('be.visible');
@@ -35,7 +35,7 @@ describe('Issue deletion', () => {
      //Click on Delete issue button
      //Check that confirmation pop-up dialogue is visible
      //Click Cancel button
-    it('Should cancel delete issue process successfully', () => {
+    it('Test case 2: Cancel Issue Deletion', () => {
         const expectedAmountOfIssuesAfterCancel = 4;
 
         cy.get('[data-testid="modal:issue-details"]').should('be.visible');
