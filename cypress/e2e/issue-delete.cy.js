@@ -31,7 +31,10 @@ describe('Issue deletion', () => {
             cy.get('[data-testid="list-issue"]').should('have.length', expectedAmountOfIssuesAfterDeletion);
         });
     });
-
+     //Open recently created issue detail view
+     //Click on Delete issue button
+     //Check that confirmation pop-up dialogue is visible
+     //Click Cancel button
     it('Should cancel delete issue process successfully', () => {
         const expectedAmountOfIssuesAfterCancel = 4;
 
