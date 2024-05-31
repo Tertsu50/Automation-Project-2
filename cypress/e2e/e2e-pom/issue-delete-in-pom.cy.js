@@ -21,5 +21,17 @@ describe('Issue delete', () => {
 
   it('Should cancel deletion process successfully', () => {
     //add steps to start deletion proces but cancel it
+
+    it("Assignment 4: Test Case 1: Issue Deletion_POM", () => {
+      // Use the Page Object Model method to delete an issue
+      IssueModal.clickDeleteButton();
+      IssueModal.confirmDeletion();
+  
+      // Verify the issue is deleted
+      cy.get('[data-testid="list-issue"]')
+        .first()
+        .should("not.contain", "This is an issue of type: Task.");
+      });
+      
   });
 });
