@@ -17,11 +17,8 @@ describe("Issue comments creating, editing and deleting", () => {
   
       getIssueDetailsModal().within(() => {
         cy.contains("Add a comment...").click();
-  
         cy.get('textarea[placeholder="Add a comment..."]').type(comment);
-  
         cy.contains("button", "Save").click().should("not.exist");
-  
         cy.contains("Add a comment...").should("exist");
         cy.get('[data-testid="issue-comment"]').should("contain", comment);
       });
