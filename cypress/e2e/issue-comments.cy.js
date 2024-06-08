@@ -68,4 +68,4 @@ describe('Issue comments creating, editing and deleting', () => {
             .find('[data-testid="issue-comment"]')
             .should('not.exist');
     });
-});
+    });
