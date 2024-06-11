@@ -112,7 +112,7 @@ describe("Issue time tracking", () => {
     
   });
 
-  it.only("should create issue, log time, update and delete it", () => {
+  it("should create issue, log time, update and delete it", () => {
     Cypress.config("defaultCommandTimeout", 70000); // Set time out first
 
     // Log time
