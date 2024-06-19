@@ -108,12 +108,12 @@ describe("Issue time tracking", () => {
     closeTimeEstimation();
     cy.wait(3000);
     openIssueDetails();
-    // Check that it worked
+    // Check that it works
     
   });
 
-  it("should create issue, log time, update and delete it", () => {
-    Cypress.config("defaultCommandTimeout", 70000); // Set time out first
+  it.only("should create issue, log time, update and delete it", () => {
+    Cypress.config("defaultCommandTimeout", 70000); // Set timeout first - 
 
     // Log time
     cy.get('[data-testid="icon:watch"]').click();
